@@ -1,4 +1,4 @@
-FROM land007/ubuntu-build:latest
+FROM land007/ubuntu:latest
 
 MAINTAINER Jia Yiqiu <jiayiqiu@eyecool.cn>
 

@@ -1,4 +1,4 @@
-FROM land007/ubuntu:16.04
+FROM land007/ubuntu-build:latest
 
 MAINTAINER Jia Yiqiu <jiayiqiu@eyecool.cn>
 
@@ -14,5 +14,5 @@ RUN chmod a+x /netcert.sh
 ENV CodeMeter_Server 192.168.86.8
 CMD /netcert.sh; /etc/init.d/ssh start; bash
 
-#docker stop ubuntu-codemeter ; docker rm ubuntu-codemeter ; docker run -it -p 20122:20022  -e "CodeMeter_Server=192.168.86.8" --privileged --name ubuntu-codemeter land007/ubuntu-codemeter:16.04
-#docker stop ubuntu-codemeter ; docker rm ubuntu-codemeter ; docker run -it -p 20122:20022 -p 3000:3000 -p 3001:3001 -p 3002:3002 -p 3003:3003 -p 3004:3004 -p 3005:3005 -p 3006:3006 -p 3007:3007 -p 3008:3008 -p 3009:3009  -e "CodeMeter_Server=192.168.86.8" --privileged --name ubuntu-codemeter land007/ubuntu-codemeter:16.04
+#docker stop ubuntu-codemeter ; docker rm ubuntu-codemeter ; docker run -it -p 20122:20022  -e "CodeMeter_Server=192.168.86.8" --privileged --name ubuntu-codemeter land007/ubuntu-codemeter:latest
+#docker stop ubuntu-codemeter ; docker rm ubuntu-codemeter ; docker run -it -p 20122:20022 -p 3000:3000 -p 3001:3001 -p 3002:3002 -p 3003:3003 -p 3004:3004 -p 3005:3005 -p 3006:3006 -p 3007:3007 -p 3008:3008 -p 3009:3009  -e "CodeMeter_Server=192.168.86.8" --privileged --name ubuntu-codemeter land007/ubuntu-codemeter:latest

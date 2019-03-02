@@ -9,4 +9,4 @@ docker stop ubuntu-codemeter ; docker rm ubuntu-codemeter ; docker run -it -p 20
 
 ```
 
-![img](https://github.com/land007/docker_ubuntu-codemeter/raw/master/WechatIMG327.jpeg)
+![img](https://github.com/land007/docker_ubuntu-codemeter/raw/master/img/WechatIMG327.jpeg)

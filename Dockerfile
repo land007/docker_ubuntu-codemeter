@@ -13,9 +13,13 @@ RUN chmod a+x /netcert.sh
 
 ENV CodeMeter_Server 192.168.86.8
 
+RUN echo $(date "+%Y-%m-%d_%H:%M:%S") > /.image_time
+RUN echo "land007/ubuntu-codemeter" > /.image_name
+
 EXPOSE 22350/tcp 22351/tcp 22352/tcp
 
-CMD /netcert.sh; /etc/init.d/ssh start; bash
+#CMD /netcert.sh; /etc/init.d/ssh start; bash
+RUN echo "/netcert.sh" >> /start.sh
 
 #docker stop ubuntu-codemeter ; docker rm ubuntu-codemeter ; docker run -it -p 20122:20022 -p 22350:22350 -p 22351:22351 -p 22352:22352 -e "CodeMeter_Server=10.2.0.109" --privileged --name ubuntu-codemeter land007/ubuntu-codemeter:latest
 #docker stop ubuntu-codemeter ; docker rm ubuntu-codemeter ; docker run -it -p 20122:20022 -p 22350:22350 -p 22351:22351 -p 22352:22352 -p 3003:3003 -p 3004:3004 -p 3005:3005 -p 3006:3006 -p 3007:3007 -p 3008:3008 -p 3009:3009  -e "CodeMeter_Server=192.168.86.8" --privileged --name ubuntu-codemeter land007/ubuntu-codemeter:latest
